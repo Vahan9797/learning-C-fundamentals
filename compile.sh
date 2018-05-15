@@ -25,10 +25,10 @@ else
         linking_lib ${name};
         case "$name" in
             *.c)
-                gcc -o $(basename "$name") "${name%.*}"
+                gcc -o ${linkingLibs} $(basename "$name") "${name%.*}"
                 ;;
             *.cc)
-                g++ -o $(basename "$name") "${name%.*}"
+                g++ -o ${linkingLibs} $(basename "$name") "${name%.*}"
                 ;;
             *)
                 echo "Ignoring $name, since it is not one of my files!"
