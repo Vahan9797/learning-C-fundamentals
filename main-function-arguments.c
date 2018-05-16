@@ -5,7 +5,7 @@ void fun_with_void(void) { }
 
 int main(void) {
     fun(10, "GfG", "GQ"); // Compiles and runs fine in C, but not in C++
-    fun_with_void(10, "GfG", "GQ"); // Fails in compilation in both C and C++
+    //fun_with_void(10, "GfG", "GQ"); // Fails in compilation in both C and C++, uncomment to see the error, commented just to pass compilation
     return 0;
 }
 
