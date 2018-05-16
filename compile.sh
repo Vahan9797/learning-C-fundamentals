@@ -14,7 +14,7 @@ linking_lib() {
 
 # destination should be source-files folder
 if [ $# -eq 0 ]; then
-    filenames=$(ls -l | grep -o *.c);
+    filenames=$(ls -l | grep -o [A-Za-z0-9_-]+.c);
 	for name in "$filenames"; do
         linking_lib ${name};
 	    echo "Compiling \033[0;33m$name\033[0m ..."
