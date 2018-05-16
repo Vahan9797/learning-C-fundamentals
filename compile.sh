@@ -7,7 +7,10 @@ linking_lib() {
     case "$1" in
         pthreads.c)
             linkingLibs="-pthread"
-        ;;
+            ;;
+        *)
+            linkingLibs=""
+            ;;
         #TODO: make cases for every file
     esac
 }
