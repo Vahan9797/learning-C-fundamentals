@@ -25,12 +25,13 @@ if [ $# -eq 0 ]; then
 else
     for name in "$@"; do
         linking_lib ${name};
+        echo "Compiling \033[0;33m$name\033[0m ..."
         case "$name" in
             *.c)
-                gcc ${linkingLibs} $(basename "$name") -o ./source-files/"${name%.*}"
+                gcc ${linkingLibs} $(basename "$name") -o ./source-files/"${name%.*}" && echo "\033[1;92m$name\033[0m done."
                 ;;
             *.cc)
-                g++ ${linkingLibs} $(basename "$name") -o ./source-files/"${name%.*}"
+                g++ ${linkingLibs} $(basename "$name") -o ./source-files/"${name%.*}" && echo "\033[1;92m$name\033[0m done."
                 ;;
             *)
                 echo "Ignoring $name, since it is not one of my files!"
