@@ -66,3 +66,5 @@ int main(void) {
 
     return 0;
 }
+
+// also there is an interesting info on https://www.geeksforgeeks.org/structure-member-alignment-padding-and-data-packing/ [HARD]
