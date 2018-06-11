@@ -61,9 +61,9 @@ int main() {
     t.y = 10; // t.x also gets updated to 10
     printf("After making y = 10:\n x = %d, y = %d\n\n", t.x, t.y); // outputs 10, 10
 
-    printf("sizeof(Ints) = %lu, sizeof(IntAndChar) = %lu, sizeof(IntArrAndChar) = %lu",
-           sizeof(Ints), sizeof(IntAndChar),
-           sizeof(IntArrAndChar)); // outputs 4, 4, 40
+    printf("sizeof(Ints) = %lu, sizeof(IntAndChar) = %lu, sizeof(IntArrAndChar) = %lu\n",
+           sizeof(union Ints), sizeof(union IntAndChar),
+           sizeof(union IntArrAndChar)); // outputs 4, 4, 40
 
     // Like structures, we can have pointers to unions and can access members using arrow operator (->).
     // The following example demonstrates the same.
@@ -74,5 +74,5 @@ int main() {
     union IntAndChar *p2 = &p1;
 
     // Accessing union members using pointer
-    printf("%d, %c", p2->x, p2->y); // outputs 65, A
+    printf("%d, %c\n", p2->x, p2->y); // outputs 65, A
 }
